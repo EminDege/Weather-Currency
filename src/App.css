@@ -1,0 +1,16 @@
+.weather1 {
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+}
+
+.weather2 {
+    background-color: #ba9b9b;
+    display: flex;
+    justify-content: center;
+}
+
+.currency {
+    background-color: #85936f;
+    text-align: center;
+}
