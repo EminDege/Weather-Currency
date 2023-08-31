@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { FaExchangeAlt } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 
 function Currency() {
     const [fromCurrency, setFromCurrency] = useState("USD");
@@ -81,7 +81,7 @@ function Currency() {
                 <option selected value={"USD"}>USD</option>
                 <option value={"ZAR"}>ZAR</option>
             </select>
-            <button className='m-3'><FaExchangeAlt size={25} color='#457B9D' /></button>
+            <button className='m-3' onClick={calculate}><FaArrowRight size={25} color='#457B9D' /></button>
             <select onChange={handleToCurrency}>
                 <option value={"AUD"}>AUD</option>
                 <option value={"BGN"}>BGN</option>
