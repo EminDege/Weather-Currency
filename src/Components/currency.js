@@ -4,7 +4,7 @@ import { FaExchangeAlt } from 'react-icons/fa';
 
 function Currency() {
     const [fromCurrency, setFromCurrency] = useState("USD");
-    const [inputValue, setInputValue] = useState(1);
+    const [inputValue, setInputValue] = useState();
     const [toCurrency, setToCurrency] = useState("TRY");
     const [score, setScore] = useState();
     const veri = useRef();

@@ -14,3 +14,13 @@
     background-color: #85936f;
     text-align: center;
 }
+
+.currency2 {
+    background-color: #a5e12d;
+
+}
+
+.currency2 h3 {
+    font-size: 1.7vw;
+    margin: 20px;
+}
