@@ -7,6 +7,7 @@ import Currency2 from './Components/currency2';
 import Clock from './Components/clock';
 import Stopwatch from './Components/stopwacth';
 import CountdownTimer from './Components/countDownTimer';
+import Calendar from './Components/calendar';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <div className='clock col-md-2'><Clock /></div>
         <div className='clock col-md-2'><Stopwatch /></div>
         <div className='clock col-md-2'><CountdownTimer /></div>
+        <div className='calendarmain col-md-6'><Calendar /></div>
 
       </div>
     </div>

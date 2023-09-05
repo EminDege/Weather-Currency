@@ -1,0 +1,84 @@
+/* Calendar.css */
+.calendar {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    text-align: center;
+    margin: 10px auto;
+
+}
+
+.calendar-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px 8px 0 0;
+}
+
+.calendar-month {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.calendar-days {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.calendar-day {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.current-month {
+    color: #000;
+}
+
+.other-month {
+    color: #aaa9a9;
+}
+
+.calendar-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.button2 {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
