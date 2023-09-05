@@ -4,6 +4,9 @@ import Weather2 from "./Components/weather2";
 import "./App.css";
 import Currency from './Components/currency';
 import Currency2 from './Components/currency2';
+import Clock from './Components/clock';
+import Stopwatch from './Components/stopwacth';
+import CountdownTimer from './Components/countDownTimer';
 
 function App() {
   return (
@@ -23,6 +26,12 @@ function App() {
         <div className='currency2 col-md-4'>
           <Currency2 />
         </div>
+      </div>
+      <div className='row'>
+        <div className='clock col-md-2'><Clock /></div>
+        <div className='clock col-md-2'><Stopwatch /></div>
+        <div className='clock col-md-2'><CountdownTimer /></div>
+
       </div>
     </div>
   )
