@@ -42,17 +42,23 @@ function CountdownTimer() {
     };
 
     const handleMinuteChange = (e) => {
-        if (!isActive) {
-            setInitialMinutes(e.target.value);
-            setMinutes(e.target.value);
+        const newValue = parseInt(e.target.value);
+        if (!isActive && newValue >= 0 && newValue <= 59) {
+            setInitialMinutes(newValue);
+            setMinutes(newValue);
         }
     };
 
     const handleSecondChange = (e) => {
-        if (!isActive) {
-            setInitialSeconds(e.target.value);
-            setSeconds(e.target.value);
+        const newValue = parseInt(e.target.value);
+        if (!isActive && newValue >= 0 && newValue <= 59) {
+            setInitialSeconds(newValue);
+            setSeconds(newValue);
         }
+    };
+
+    const formatTime = (value) => {
+        return value.toString().padStart(2, '0');
     };
 
     return (
@@ -78,12 +84,12 @@ function CountdownTimer() {
             </div>
             <div>
                 <button onClick={toggleTimer}>
-                    {isActive ? "Durdur" : "Başlat"}
+                    {isActive ? "Stop" : "Start"}
                 </button>
-                <button onClick={resetTimer} disabled={isActive && (minutes !== 0 || seconds !== 0)}>Sıfırla</button>
+                <button onClick={resetTimer} disabled={isActive && (minutes !== 0 || seconds !== 0)}>Reset</button>
             </div>
             <div>
-                <p>{`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}</p>
+                <p className='time'>{`${formatTime(minutes)}:${formatTime(seconds)}`}</p>
             </div>
         </div>
     );

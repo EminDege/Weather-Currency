@@ -1,34 +1,132 @@
-.weather1 {
-    background-color: #ddd;
-    display: flex;
-    justify-content: center;
-}
-
-.weather2 {
-    background-color: #ba9b9b;
-    display: flex;
-    justify-content: center;
-}
-
-.currency {
-    background-color: #85936f;
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #333333;
+    color: #fff;
     text-align: center;
 }
 
-.currency2 {
-    background-color: #a5e12d;
-
+h1,
+h2 {
+    font-weight: bold;
 }
 
+input {
+    margin: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.welcome {
+    margin-top: 100px;
+    font-size: 32px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+button {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 3px solid #ffff;
+    box-shadow: 5px 5px 10px rgba(9, 9, 9, 0.2);
+    margin: 5px;
+}
+
+button:focus,
+button:active {
+    outline: none;
+}
+
+button:hover {
+    background-color: #78868C;
+}
+
+.currency {
+    text-align: center;
+}
+
+
 .currency2 h3 {
-    font-size: 1.7vw;
+    font-size: 20px;
     margin: 20px;
 }
 
-.clock {
-    background-color: #9de06d;
+select {
+    border: none;
+    padding: 3px;
+    border-bottom: 2px solid #78868C;
+    outline: none;
+    border-radius: 5px;
 }
 
-.calendarmain {
-    background-color: #f0713e;
+.weatherMain .subTitle {
+    text-align: start;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.weatherMain span {
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.weather1,
+.weather2 {
+    display: flex;
+    justify-content: center;
+}
+
+.clock {
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.clock h4 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.clock2 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.time {
+    font-size: 24px;
+}
+
+.selectedCurrency {
+    background-color: #008000;
+    color: #fff;
+}
+
+.selectedWeather {
+    background-color: #001f3f;
+    color: #fff;
+}
+
+.selectedClock {
+    background-color: #8B0000;
+    color: #fff;
+}
+
+body.Currency {
+    background-color: #008000;
+}
+
+body.Weather {
+    background-color: #001f3f;
+}
+
+body.Clock {
+    background-color: #8B0000;
 }

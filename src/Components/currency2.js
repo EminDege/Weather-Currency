@@ -20,7 +20,7 @@ function Currency2() {
                 setEurToTry(eurToTry);
                 setEurToUsd(eurToUsd);
             } catch (err) {
-                alert("Veri alınamadı!!");
+                alert("Data could not be received!!");
             }
         }
 
@@ -29,9 +29,9 @@ function Currency2() {
 
     return (
         <div >
-            <h3> 1 TL = {parseFloat(usdToTry).toFixed(3)} DOLAR </h3>
+            <h3> 1 TL = {parseFloat(usdToTry).toFixed(3)} DOLLAR </h3>
             <h3> 1 TL = {parseFloat(eurToTry).toFixed(3)} EURO </h3>
-            <h3> 1 EURO = {parseFloat(eurToUsd).toFixed(3)} DOLAR </h3>
+            <h3> 1 EURO = {parseFloat(eurToUsd).toFixed(3)} DOLLAR </h3>
         </div>
     );
 }

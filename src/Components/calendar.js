@@ -2,18 +2,22 @@ import React, { useState } from 'react';
 import './calendar.css';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-
 function Calendar() {
     const [selectedDate, setSelectedDate] = useState(new Date());
+    const [currentDate] = useState(new Date()); // Geçerli tarihi al
+    const firstDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
+    const firstDayOfWeek = firstDayOfMonth.getDay(); // Haftanın gününü alır (0'dan başlayarak)
+
 
     const renderHeader = () => {
         const dateFormat = "MMMM yyyy";
+        const options = { year: 'numeric', month: 'long' };
+        const locale = 'en-US';
         return (
             <div className="calendar-header">
                 <div className="calendar-month">
                     <button className='button2' onClick={goToPreviousMonth}><IoIosArrowBack size={25} color='#000' /></button>
-                    {selectedDate.toLocaleDateString(undefined, { month: 'long' })}{" "}
-                    {selectedDate.getFullYear()}
+                    <span className='monthName'> {selectedDate.toLocaleDateString(locale, options)}{" "}</span>
                     <button className='button2' onClick={goToNextMonth}><IoIosArrowForward size={25} color='#000' /></button>
                 </div>
             </div>
@@ -36,19 +40,24 @@ function Calendar() {
     };
 
     const renderCells = () => {
-        const monthStart = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
+        const firstDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
+        const firstDayOfWeek = firstDayOfMonth.getDay(); // Haftanın gününü alır (0'dan başlayarak)
         const monthEnd = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, 0);
-        const startDate = new Date(monthStart.getFullYear(), monthStart.getMonth(), 1);
-        const endDate = new Date(monthEnd.getFullYear(), monthEnd.getMonth() + 1, 0);
+        const startDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1 - firstDayOfWeek);
+        const endDate = new Date(monthEnd.getFullYear(), monthEnd.getMonth() + 1, 6 - monthEnd.getDay());
         const rows = [];
         let days = [];
         let day = startDate;
 
         while (day <= endDate) {
             for (let i = 0; i < 7; i++) {
+                const isCurrentMonth = day.getMonth() === selectedDate.getMonth();
+                const isCurrentDay = day.toDateString() === currentDate.toDateString();
+                const isFirstDayOfMonth = day.getDate() === 1;
+
                 days.push(
                     <div
-                        className={`calendar-cell ${day.getMonth() === selectedDate.getMonth() ? "current-month" : "other-month"}`}
+                        className={`calendar-cell ${isCurrentMonth ? "current-month" : "other-month"} ${isCurrentDay ? "current-day" : ""} ${isFirstDayOfMonth ? "first-day-of-month" : ""}`}
                         key={day}
                     >
                         {day.getDate()}
@@ -68,6 +77,7 @@ function Calendar() {
 
         return <div className="calendar-body">{rows}</div>;
     };
+
 
     const goToPreviousMonth = () => {
         setSelectedDate(new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, 1));

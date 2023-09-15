@@ -12,7 +12,7 @@ function Stopwatch() {
             const startTime = Date.now() - elapsedTime;
             intervalRef.current = setInterval(() => {
                 setElapsedTime(Date.now() - startTime);
-            }, 10); // Her 10 milisaniyede bir güncelle (0.01 saniye)
+            }, 10);
         }
         setIsRunning(!isRunning);
     };
@@ -32,11 +32,11 @@ function Stopwatch() {
 
     return (
         <div className="stopwatch">
-            <h4>Kronometre</h4>
+            <h4>Stopwatch</h4>
             <div className="time">{formatTime(elapsedTime)}</div>
-            <div className="buttons">
-                <button onClick={startStop}>{isRunning ? 'Durdur' : 'Başlat'}</button>
-                <button onClick={reset}>Sıfırla</button>
+            <div className="buttons" style={{ marginTop: '0px' }}>
+                <button onClick={startStop}>{isRunning ? 'Stop' : 'Start'}</button>
+                <button onClick={reset}>Reset</button>
             </div>
         </div>
     );
