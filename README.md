@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# 🌐 Multi-Widget React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple yet versatile **React.js** project that combines multiple everyday utility widgets into a single application. It includes components like weather information (based on location or city), currency conversion, live exchange rates, real-time clock, stopwatch, and a countdown timer.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### 📍 Weather1 - Location-Based Weather
+- Automatically detects the user's geolocation and displays the current weather.
+- Powered by [OpenWeatherMap API](https://openweathermap.org/).
 
-### `npm start`
+### 🏙️ Weather2 - City-Based Weather
+- Allows the user to enter a city name and fetch the current weather conditions for that city.
+- Powered by [OpenWeatherMap API](https://openweathermap.org/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 💱 Currency - Currency Converter
+- Converts between two selected currencies based on the user's input amount.
+- Provides a wide range of currencies.
+- Powered by [FreeCurrencyAPI](https://freecurrencyapi.com/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 💸 Currency2 - Live Exchange Rates
+- Displays:
+  - 1 USD to TRY
+  - 1 EUR to TRY
+  - 1 EUR to USD
+- Powered by [FreeCurrencyAPI](https://freecurrencyapi.com/).
 
-### `npm test`
+### 🕒 Clock - Live Clock
+- Shows the current time (hour:minute:second).
+- Updates automatically every second.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⏱️ Stopwatch
+- A basic stopwatch with Start, Stop, and Reset functions.
+- Displays time with millisecond precision.
 
-### `npm run build`
+### ⏳ Countdown Timer
+- A simple timer that counts down from user-defined minutes and seconds.
+- Includes Start, Stop, and Reset buttons.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React.js** (bootstrapped with Create React App)
+- **Axios** – for API requests
+- **use-position** – for geolocation handling
+- **Bootstrap / CSS** – for styling
+- **React Icons** – for enhanced UI
 
-### `npm run eject`
+---
+API Keys
+The application requires API keys to function correctly:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+OpenWeatherMap: for weather data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+FreeCurrencyAPI: for currency and exchange rate data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+⚠️ These keys are currently hardcoded inside the components. For production use, it's recommended to move them into a .env file and use environment variables.
+---
+## 🔧 Installation & Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repository to your local machine.
+   
+   ```bash
+   git clone https://github.com/EminDege/Weather-Currency.git
+   cd Weather-Currency
+2.Install dependencies using npm or yarn.
+  npm install
+3.Run the app locally.
+  npm start
