@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
@@ -29,8 +29,8 @@ function Currency2() {
 
     return (
         <div >
-            <h3> 1 TL = {parseFloat(usdToTry).toFixed(3)} DOLLAR </h3>
-            <h3> 1 TL = {parseFloat(eurToTry).toFixed(3)} EURO </h3>
+            <h3> 1 DOLLAR = {parseFloat(usdToTry).toFixed(3)} TL </h3>
+            <h3> 1 EURO = {parseFloat(eurToTry).toFixed(3)} TL </h3>
             <h3> 1 EURO = {parseFloat(eurToUsd).toFixed(3)} DOLLAR </h3>
         </div>
     );
